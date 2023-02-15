@@ -28,7 +28,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   totalElement.textContent = total;
   const clearButton = document.querySelector(".buttn.clear");
+
+  // clear
   clearButton.addEventListener("click", () => {
+    menuItems.forEach((item) => {
+      const quantity = item.querySelector(".quantity");
+      quantity.innerHTML = 0;
+    });
+    totalElement.innerHTML = 0;
+    total = 0;
+  });
+
+  // order
+  const orderButton = document.querySelector(".buttn.order");
+  orderButton.addEventListener("click", () => {
+    var orderMessage = "Order paced!\n";
+    console.log(orderMessage);
+    menuItems.forEach((item) => {
+      const quantity = item.querySelector(".quantity");
+      const name = item.querySelector(".name");
+      if (quantity != 0) {
+        orderMessage +=
+          String(quantity.innerHTML) + " " + String(name.innerHTML) + "\n";
+      }
+      console.log(orderMessage);
+    });
+    alert(orderMessage);
     menuItems.forEach((item) => {
       const quantity = item.querySelector(".quantity");
       quantity.innerHTML = 0;
