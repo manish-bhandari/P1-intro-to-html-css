@@ -13,6 +13,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <!-- Implement from below -->
@@ -32,11 +33,15 @@
         </div>
         <div class="details-container">
           <div class="top-row">
-            <p>Mac and Cheese</p>
-            <p>$5</p>
+            <p class="name">Mac and Cheese</p>
+            <p>$<span class="cost">5</span></p>
           </div>
           <div class="bottom-row">
-            <button>order</button>
+            <div class="plus-minus-container">
+            <button class="minus increment">-</button>
+            <p class="quantity">0</p>
+            <button class="plus increment">+</button>
+            </div>
           </div>
         </div>
       </div>
@@ -48,11 +53,15 @@
         </div>
         <div class="details-container">
           <div class="top-row">
-            <p>Pasta</p>
-            <p>$8</p>
+            <p class="name">Pasta</p>
+            <p>$<span class="cost">8</span></p>
           </div>
           <div class="bottom-row">
-            <button>order</button>
+            <div class="plus-minus-container">
+            <button class="minus increment">-</button>
+            <p class="quantity">0</p>
+            <button class="plus increment">+</button>
+            </div>
           </div>
         </div>
       </div>
@@ -64,11 +73,15 @@
         </div>
         <div class="details-container">
           <div class="top-row">
-            <p>Tacos</p>
-            <p>$8</p>
+            <p class="name">Tacos</p>
+            <p>$<span class="cost">8</span></p>
           </div>
           <div class="bottom-row">
-            <button>order</button>
+            <div class="plus-minus-container">
+            <button class="minus increment">-</button>
+            <p class="quantity">0</p>
+            <button class="plus increment">+</button>
+            </div>
           </div>
         </div>
       </div>
@@ -80,14 +93,30 @@
         </div>
         <div class="details-container">
           <div class="top-row">
-            <p>Enchilada</p>
-            <p>$10</p>
+            <p class="name">Enchilada</p>
+            <p>$<span class="cost">10</span></p>
           </div>
           <div class="bottom-row">
-            <button>order</button>
+            <div class="plus-minus-container">
+            <button class="minus increment">-</button>
+            <p class="quantity">0</p>
+            <button class="plus increment">+</button>
+            </div>
           </div>
         </div>
       </div>
+      <div class="bottom">
+        <div class="subtotal-container">
+          <p style="margin-right:5px">Subtotal:</p>
+          <p> $<span class="total">5</span></p>
+        </div>
+        <div class="buttons-container">
+          <button class="buttn order">Order</button>
+          <button class="buttn clear">Clear all</button>
+  
+        </div>
+      </div>
     </div>
+    
   </body>
 </html>
